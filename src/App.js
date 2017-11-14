@@ -21,7 +21,8 @@ class App extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('handleSubmit called');
+    const newTodo = { description: this.state.newTodoDescription, isCompleted: false };
+    this.setState({ todos: [...this.state.todos, newTodo] });
   }
 
   toggleComplete(index) {
