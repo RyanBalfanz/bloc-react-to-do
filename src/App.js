@@ -14,8 +14,11 @@ class App extends Component {
     };
   }
 
-  toggleComplete() {
-    console.log('toggleComplete executed');
+  toggleComplete(index) {
+    const todos = this.state.todos.slice();
+    const todo = todos[index];
+    todo.isCompleted = todo.isCompleted ? false : true;
+    this.setState({ todos: todos });
   }
 
   render() {
