@@ -14,6 +14,11 @@ class App extends Component {
     };
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log('handleSubmit called');
+  }
+
   toggleComplete(index) {
     const todos = this.state.todos.slice();
     const todo = todos[index];
