@@ -29,6 +29,10 @@ class App extends Component {
           <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } />
         )}
         </ul>
+        <form>
+           <input type="text" />
+           <input type="submit" />
+         </form>
       </div>
     );
   }
