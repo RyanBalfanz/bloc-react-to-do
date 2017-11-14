@@ -3,6 +3,10 @@ import './App.css';
 import ToDo from './components/ToDo.js';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div className="App">
