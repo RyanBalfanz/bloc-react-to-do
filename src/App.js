@@ -10,8 +10,13 @@ class App extends Component {
         { description: 'Walk the cat', isCompleted: true },
         { description: 'Throw the dishes away', isCompleted: false },
         { description: 'Buy new dishes', isCompleted: false }
-      ]
+      ],
+      newTodoDescription: ''
     };
+  }
+
+  handleChange(e) {
+    this.setState({ newTodoDescription: e.target.value })
   }
 
   handleSubmit(e) {
@@ -35,7 +40,7 @@ class App extends Component {
         )}
         </ul>
         <form onSubmit={ (e) => this.handleSubmit(e) }>
-           <input type="text" />
+           <input type="text" value={ this.state.newTodoDescription } onChange={ (e) => this.handleChange(e) } />
            <input type="submit" />
          </form>
       </div>
