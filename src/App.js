@@ -15,6 +15,11 @@ class App extends Component {
     };
   }
 
+  deleteTodo(index) {
+    const todos = this.state.todos.filter((value, idx) => idx !== index);
+    this.setState({todos});
+  }
+
   handleChange(e) {
     this.setState({ newTodoDescription: e.target.value })
   }
